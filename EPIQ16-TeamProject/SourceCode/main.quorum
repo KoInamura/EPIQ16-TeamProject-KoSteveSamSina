@@ -1,0 +1,38 @@
+use Libraries.Game.Game
+use Libraries.Game.Graphics.Camera
+use Libraries.Game.Graphics.Model
+use Libraries.Game.Graphics.Color
+use Libraries.Compute.Vector3
+use Libraries.Game.Graphics.AmbientLight
+use Libraries.Game.Graphics.PointLight
+use Libraries.Game.Graphics.DirectionalLight
+use Libraries.Game.Audio3D
+use Libraries.Game.Graphics.Drawable
+use Libraries.Game.Graphics.Camera
+
+class Main is Game
+    Camera camera = undefined
+    Model ground
+    Drawable grass
+   
+    action Main
+        StartGame()
+    end
+
+   
+    action CreateGame
+        camera = GetCamera3D()
+        camera:SetPosition(0, 25, -500)
+        camera:LookAt(0, 0, 0)
+        camera:SetFar(1000)
+        camera:SetNear(1)
+
+        grass:Load("GrassField1.jpg")
+        ground:LoadBox(2000, 2, 2000, grass)
+        Add(ground)
+    end
+
+    
+    action Update(number seconds)
+    end
+end
