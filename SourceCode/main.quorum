@@ -30,10 +30,11 @@ class Main is Game, KeyboardListener
     Model rock8
     Model rock9
     Model rock10
+    Model head
 
     Model diver
     
-
+    
     Drawable grass
     Drawable background
     Drawable rockPicture
@@ -94,10 +95,17 @@ class Main is Game, KeyboardListener
         diver:SetPosition(0, 10, -500)
         diver:Rotate(0, 1, 0, 90)
         Add(diver)
+
+        helmet:Load("diving-helmet.jpg")					
+        head:LoadSphere(3, 3, 3, helmet)
+        head:Rotate(0, 1, 0, 90)
+        head:SetPosition(0, 5, 0)
+        diver:Add(head)
+
         
         pointLight:SetColor(1, 1, 1, 1)
         pointLight:SetPosition(0, 3, 0)
-        pointLight:SetIntensity(50)
+        pointLight:SetIntensity(20)
         diver:Add(pointLight)
 
         rockPicture:Load("Rock1.png")
