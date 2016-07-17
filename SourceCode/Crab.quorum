@@ -1,5 +1,6 @@
 use Libraries.Game.Graphics.Model
 use Libraries.Game.Graphics.Color
+use Libraries.Compute.Math
 use Libraries.Compute.Vector3
 use Libraries.Game.Graphics.PointLight
 use Libraries.Game.Audio3D
@@ -11,6 +12,7 @@ PointLight characterLight
 Audio3D audio
 Wall leftWall
 Wall rightWall
+Math math
 Random random
 integer speed = 28
 integer direction = 1 // 1 means right and -1 means left
@@ -63,8 +65,12 @@ Color characterLightColor
 
     action Update(number seconds)
         Move(direction*speed*seconds, 0, 0)
-           
-            if GetPosition():Distance(leftWall:GetPosition()) < 1.0 or GetPosition():Distance(rightWall:GetPosition()) < 1.0
+
+//output("crab X: "+GetPosition():GetX())
+//output("Left Wall X: "+leftWall:GetPosition():GetX())
+//output("Right Wall X: "+rightWall:GetPosition():GetX())
+
+            if math:AbsoluteValue(GetPosition():GetX()-leftWall:GetPosition():GetX()) < 1.0 or math:AbsoluteValue(GetPosition():GetX() - rightWall:GetPosition():GetX()) < 1.0
                 direction = direction * -1 // flip the direction
         SpawnRandomly()
             end
