@@ -38,17 +38,14 @@ class Main is Game, KeyboardListener
     Drawable rockPicture
 
     Random ran
-    
-    Character crab
 
-    
     // The speed of the character when he moves
     number speed = 10
 
     // These are the values that we will use to move the character
-    number positionX = 0
-    number positionY = 0
-    number positionZ = 0
+    number velocityX = 0
+    number velocityY= 0
+    number velocityZ = 0
       
    
     action Main
@@ -145,14 +142,20 @@ class Main is Game, KeyboardListener
         rock10:LoadBox(20, 20, 20, rockPicture)
         rock10:SetPosition(-100, 10, 250)
         Add(rock10)
-
-        //Putting a crab on the main game by using tthe Character class
-        crab:LoadCrabCylinder()
         
+        Color wallColor // todo: load this up with a meaningful color
+        Wall leftWall1
+        leftWall1:LoadWall(0, 0, 0, wallColor) // fill in a height, width, and depth
+        leftWall1:SetPosition(0, 0, 0) // fill in a x, y,and z
+        Wall rightWall1
+        rightWall1:LoadWall(0, 0, 0, wallColor) // fill in a height, width, and depth
+        rightWall1:SetPosition(0, 0, 0) // fill in a x, y,and z
+        Crab crab1
+        crab1:LoadCrab(0, 0, 0, leftWall1, rightWall1) // fill in a width, height, and depth (no need to provide position b/c magic!)
 
-        crab:CrabAudioSet()
-        
-        Add(crab)
+        Add(leftWall1)
+        Add(rightWall1)
+        Add(crab1)
 
         // Add a keyboardListener to move the character
         AddKeyboardListener(me)
@@ -163,7 +166,7 @@ class Main is Game, KeyboardListener
     action Update(number seconds)
 
      // Moves the character every update depending on the values of the 3 fields
-        diver:Move(positionX*seconds, positionY*seconds, positionZ*seconds)
+        diver:Move(velocityX*seconds, velocityY*seconds, velocityZ*seconds)
 
         // Moves the camera according to the character position
        // camera:SetPosition(diver:GetPosition():GetX()-4,diver:GetPosition():GetY()+3,diver:GetPosition():GetZ())
@@ -175,8 +178,7 @@ class Main is Game, KeyboardListener
         if e:keyCode = e:UP
             MoveForward()
         elseif e:keyCode = e:LEFT
-            MoveLeft() /* you have to check more keycode */
-            /* TO DO */
+            MoveLeft()
         elseif e:keyCode = e:RIGHT
             MoveRight()
         elseif e:keyCode = e:DOWN
@@ -185,39 +187,37 @@ class Main is Game, KeyboardListener
     end
 
     action ReleasedKey(KeyboardEvent e)
-        positionX = 0      
-        positionY = 0
-        positionZ = 0
+        StopCharacter()
     end
 
     action MoveForward() 
-        positionX = 0       // we move forward because camera is looking down x axis
-        positionY = 0
-        positionZ = speed
+        velocityX = 0
+        velocityY = 0
+        velocityZ = speed
     end
 
     action StopCharacter()
-        positionX = 0      
-        positionY = 0
-        positionZ = 0
+        velocityX = 0      
+        velocityY = 0
+        velocityZ = 0
     end
 
     action MoveLeft
-        positionX = -speed
-        positionY = 0
-        positionZ = 0 
+        velocityX = -speed
+        velocityY = 0
+        velocityZ = 0 
     end 
 
     action MoveRight
-        positionX = speed
-        positionY = 0
-        positionZ = 0 
+        velocityX = speed
+        velocityY = 0
+        velocityZ = 0 
     end 
 
     action MoveBack
-        positionX = 0
-        positionY = 0
-        positionZ = -speed 
+        velocityX = 0
+        velocityY = 0
+        velocityZ = -speed 
     end
 
 
