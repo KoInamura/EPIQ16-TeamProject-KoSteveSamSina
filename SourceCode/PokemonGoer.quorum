@@ -1,0 +1,51 @@
+use Libraries.Game.Graphics.Color
+use Libraries.Game.Graphics.PointLight
+use Libraries.Game.Graphics.Model
+use Libraries.Game.Graphics.Drawable
+
+class PokemonGoer is Model
+
+Model pokemonGoer1
+Color PointLightColor
+PointLight characterLight
+Drawable pokemonpic1
+
+    action CreateCharacter()
+        
+        pokemonpic1:Load("pokemonGoer2.png")
+        pokemonGoer1:LoadBox(5,10,3,pokemonpic1)
+        //pokemonGoer1:SetPosition(10,2,-550)
+        
+        me:SetDescription("A person playing pokemon Go")
+
+        PointLightColor:SetColor(0.98, 0.98, 0.82, 1)
+        characterLight:SetColor(PointLightColor)
+        characterLight:SetIntensity(7500)
+        characterLight:SetPosition(0, -3, 0)
+
+        me:Add(characterLight)
+
+        Add(pokemonGoer1)
+
+    end
+
+    action CreateCharacter(Text text1)
+        
+        pokemonpic1:Load(text1)
+        pokemonGoer1:LoadBox(5,10,3,pokemonpic1)
+        //pokemonGoer1:SetPosition(10,2,-550)
+        
+        me:SetDescription("A person playing pokemon Go")
+
+        PointLightColor:SetColor(0.98, 0.98, 0.82, 1)
+        characterLight:SetColor(PointLightColor)
+        characterLight:SetIntensity(7500)
+        characterLight:SetPosition(0, -3, 0)
+
+        me:Add(characterLight)
+
+        Add(pokemonGoer1)
+
+    end
+
+end
