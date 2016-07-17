@@ -31,10 +31,11 @@ class Main is Game, KeyboardListener
     Model rock9
     Model rock10
     Model head
+    Model ship1
 
     Model diver
     
-    
+    Drawable drawship 
     Drawable grass
     Drawable background
     Drawable rockPicture
@@ -101,6 +102,11 @@ class Main is Game, KeyboardListener
         head:Rotate(0, 1, 0, 90)
         head:SetPosition(0, 4, 0)
         diver:Add(head)
+
+        drawship:Load("shipwreck.png")
+        ship1:LoadBox(100, 100, 100, drawship)
+        ship1:SetPosition(-100, 2, 15)
+        Add(ship1) 
 
         
         pointLight:SetColor(1, 1, 1, 1)
