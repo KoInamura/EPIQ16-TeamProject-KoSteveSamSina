@@ -32,6 +32,8 @@ class Main is Game, KeyboardListener
     Drawable grass
     Drawable background
     Drawable rockPicture
+    
+    Character crab
         
    
     action Main
@@ -104,9 +106,24 @@ class Main is Game, KeyboardListener
         rock6:SetPosition(10, 10, -400)
         Add(rock6)
 
+        crab:LoadSphere(40,40,40,"crab.png")
+        crab:SetPosition(35,50,-500)
+        
+        Add(crab)
+
+
     end
 
     
     action Update(number seconds)
+
+        crab:Move(0, 0, seconds * -50)
+            /* ************ */
+            /* when a box hit the other wall, we have to put it back to his first position */
+            if crab:GetZ() < -10 // -30 is the Z-Axis position of the left wall 
+                Remove(crab) // we remove it temporarly of the scene
+                crab:SetZ(crab:GetZ() + 1) // the starting point
+                Add(crab) // we put it again on the scene
+            end
     end
 end

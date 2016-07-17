@@ -13,6 +13,33 @@ use Libraries.Game.Graphics.PerspectiveCamera
 use Libraries.Interface.Events.KeyboardListener
 use Libraries.Interface.Events.KeyboardEvent
 
-class Character 
-    
+class Character is Model 
+
+/*To do:
+create blueprints for character audio
+*/
+
+Model character
+Color PointLightColor
+PointLight characterLight
+
+    action Main
+        //Load a model to represent our character
+        //Give our character an initial position
+        character:SetPosition(0,0,0)
+
+        character:SetDescription("This is a basic character in the game")
+
+        //Set our point lights’s color, position, and intensity 
+        PointLightColor:SetColor(0.98, 0.98, 0.82, 1)
+        characterLight:SetColor(PointLightColor)
+        characterLight:SetIntensity(750000)
+
+        //Add our point light to our character object so that they move together
+        //characterLight:SetParent(character)
+        character:Add(characterLight)
+
+
+    end
+
 end
