@@ -17,6 +17,11 @@ Random random
 integer speed = 28
 integer direction = 1 // 1 means right and -1 means left
 
+boolean colorFlip = true
+number oldR = 0
+number oldG = 0
+number oldB = 0
+
 action GetLeftWall() returns Wall
 return leftWall
 end
@@ -74,5 +79,22 @@ Color characterLightColor
                 direction = direction * -1 // flip the direction
         SpawnRandomly()
             end
+
+Color c = characterLight:GetColor()
+r = c:GetRed()
+g = c:GetGreen()
+b = c:GetBlue()
+
+if colorFlip
+characterLight:SetColor(r-0.5, g-0.5, b-0.5, 0.9)
+oldR = r
+oldG = b
+oldB = b
+else
+characterLight:SetColor(oldR, oldG, oldB, 0.9)
+end
+
+colorFlip = not colorFlip
+
     end
 end
