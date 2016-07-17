@@ -32,10 +32,12 @@ class Main is Game, KeyboardListener
     Model rock10
 
     Model diver
+    
 
     Drawable grass
     Drawable background
     Drawable rockPicture
+    Drawable helmet
 
     Random ran
 
@@ -172,7 +174,7 @@ class Main is Game, KeyboardListener
 
         // Moves the camera according to the character position
        // camera:SetPosition(diver:GetPosition():GetX()-4,diver:GetPosition():GetY()+3,diver:GetPosition():GetZ())
-        camera:SetPosition(diver:GetPosition():GetX()-5,diver:GetPosition():GetY(),diver:GetPosition():GetZ())
+       //first person //camera:SetPosition(diver:GetPosition():GetX()-5,diver:GetPosition():GetY(),diver:GetPosition():GetZ())
        camera:SetPosition(diver:GetPosition():GetX(),diver:GetPosition():GetY()+5,diver:GetPosition():GetZ()-10)
 
 
