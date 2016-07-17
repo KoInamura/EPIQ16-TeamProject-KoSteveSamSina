@@ -144,14 +144,16 @@ class Main is Game, KeyboardListener
         Add(rock10)
         
         Color wallColor // todo: load this up with a meaningful color
+        wallColor:Yellow()
         Wall leftWall1
-        leftWall1:LoadWall(0, 0, 0, wallColor) // fill in a height, width, and depth
-        leftWall1:SetPosition(0, 0, 0) // fill in a x, y,and z
+        leftWall1:LoadWall(50, 100, 200, wallColor) // fill in a height, width, and depth
+        leftWall1:SetPosition(10, 2, 20) // fill in a x, y,and z
         Wall rightWall1
-        rightWall1:LoadWall(0, 0, 0, wallColor) // fill in a height, width, and depth
-        rightWall1:SetPosition(0, 0, 0) // fill in a x, y,and z
+        rightWall1:LoadWall(50, 100, 200, wallColor) // fill in a height, width, and depth
+        rightWall1:SetPosition(120, 2, 20) // fill in a x, y,and z
+        
         Crab crab1
-        crab1:LoadCrab(0, 0, 0, leftWall1, rightWall1) // fill in a width, height, and depth (no need to provide position b/c magic!)
+        crab1:LoadCrab(10, 10, 20, leftWall1, rightWall1) // fill in a width, height, and depth (no need to provide position b/c magic!)
 
         Add(leftWall1)
         Add(rightWall1)
