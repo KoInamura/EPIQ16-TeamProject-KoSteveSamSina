@@ -1,4 +1,4 @@
-﻿use Libraries.Game.Graphics.Model
+use Libraries.Game.Graphics.Model
 use Libraries.Game.Graphics.Color
 use Libraries.Compute.Vector3
 use Libraries.Game.Graphics.PointLight
@@ -12,7 +12,7 @@ Audio3D audio
 Wall leftWall
 Wall rightWall
 Random random
-integer speed = 8
+integer speed = 28
 integer direction = 1 // 1 means right and -1 means left
 
 action GetLeftWall() returns Wall
@@ -46,7 +46,7 @@ Drawable crab
         LoadCylinder(width, height, depth, crab)
         SetDescription("Crab")
 
-        //Set our point lights�s color, position, and intensity 
+        //Set our point lights s color, position, and intensity 
 Color characterLightColor
         characterLightColor:SetColor(0.98, 0.98, 0.82, 1)
         characterLight:SetColor(characterLightColor)
