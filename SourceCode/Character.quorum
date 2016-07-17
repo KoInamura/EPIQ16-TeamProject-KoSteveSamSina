@@ -12,6 +12,7 @@ use Libraries.Game.Layer2D
 use Libraries.Game.Graphics.PerspectiveCamera
 use Libraries.Interface.Events.KeyboardListener
 use Libraries.Interface.Events.KeyboardEvent
+use Libraries.Compute.Random
 
 class Character is Model 
 
@@ -19,27 +20,55 @@ class Character is Model
 create blueprints for character audio
 */
 
-Model character
 Color PointLightColor
 PointLight characterLight
+Drawable crab
+Audio3D crabAudio
+Random ran
 
-    action Main
+integer crabGeneratePoint = 0
+
+    action LoadCrabCylinder
         //Load a model to represent our character
         //Give our character an initial position
-        character:SetPosition(0,0,0)
-
-        character:SetDescription("This is a basic character in the game")
+        
+        crab:Load("crab.png")
+        me:LoadCylinder(20,10,20, crab)
+       
+        me:SetDescription("This is a basic character in the game")
 
         //Set our point lights’s color, position, and intensity 
         PointLightColor:SetColor(0.98, 0.98, 0.82, 1)
         characterLight:SetColor(PointLightColor)
-        characterLight:SetIntensity(750000)
-
+        characterLight:SetIntensity(7500)
+        characterLight:SetPosition(0, -3, 0)
+        
         //Add our point light to our character object so that they move together
         //characterLight:SetParent(character)
-        character:Add(characterLight)
-
-
+        me:Add(characterLight)
+        SetPosition(10,30,-600)
     end
 
+    action CrabAudioSet
+        crabAudio:Load("crabWalk.ogg")
+        crabAudio:EnableLooping()
+        crabAudio:Play()
+        me:Add(crabAudio)
+    end
+
+    action Update(number seconds)
+         //Moving the crab
+        me:Move(0, 0, seconds * 40)
+            /* ************ */
+            /* when a box hit the other wall, we have to put it back to his 
+            first position */
+            
+            crabGeneratePoint = ran:RandomIntegerBetween(-200, 200)
+            if me:GetZ() > 300 // -30 is the Z-Axis position of the left wall 
+                Hide() // we remove it temporarly of the scene
+                me:SetPosition(crabGeneratePoint,30,-600)
+                //crab:SetZ(crab:GetZ() + 1) // the starting point
+                Show() // we put it again on the scene
+            end
+    end
 end
