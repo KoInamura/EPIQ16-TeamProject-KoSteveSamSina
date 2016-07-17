@@ -40,6 +40,15 @@ class Main is Game, KeyboardListener
     Random ran
     
     Character crab
+
+    
+    // The speed of the character when he moves
+    number speed = 10
+
+    // These are the values that we will use to move the character
+    number positionX = 0
+    number positionY = 0
+    number positionZ = 0
       
    
     action Main
@@ -145,11 +154,71 @@ class Main is Game, KeyboardListener
         
         Add(crab)
 
+        // Add a keyboardListener to move the character
+        AddKeyboardListener(me)
+
     end
 
     
     action Update(number seconds)
+
+     // Moves the character every update depending on the values of the 3 fields
+        diver:Move(positionX*seconds, positionY*seconds, positionZ*seconds)
+
+        // Moves the camera according to the character position
+       // camera:SetPosition(diver:GetPosition():GetX()-4,diver:GetPosition():GetY()+3,diver:GetPosition():GetZ())
         
 
     end
+    
+    action PressedKey(KeyboardEvent e)
+        if e:keyCode = e:UP
+            MoveForward()
+        elseif e:keyCode = e:LEFT
+            MoveLeft() /* you have to check more keycode */
+            /* TO DO */
+        elseif e:keyCode = e:RIGHT
+            MoveRight()
+        elseif e:keyCode = e:DOWN
+            MoveBack()
+        end
+    end
+
+    action ReleasedKey(KeyboardEvent e)
+        positionX = 0      
+        positionY = 0
+        positionZ = 0
+    end
+
+    action MoveForward() 
+        positionX = 0       // we move forward because camera is looking down x axis
+        positionY = 0
+        positionZ = speed
+    end
+
+    action StopCharacter()
+        positionX = 0      
+        positionY = 0
+        positionZ = 0
+    end
+
+    action MoveLeft
+        positionX = -speed
+        positionY = 0
+        positionZ = 0 
+    end 
+
+    action MoveRight
+        positionX = speed
+        positionY = 0
+        positionZ = 0 
+    end 
+
+    action MoveBack
+        positionX = 0
+        positionY = 0
+        positionZ = -speed 
+    end
+
+
 end
