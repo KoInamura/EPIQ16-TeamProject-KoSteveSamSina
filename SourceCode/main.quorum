@@ -35,6 +35,7 @@ class Main is Game, KeyboardListener
     
     Character crab
         
+    Audio3D crabAudio
    
     action Main
         StartGame()
@@ -108,8 +109,14 @@ class Main is Game, KeyboardListener
 
         crab:LoadSphere(40,40,40,"crab.png")
         crab:SetPosition(35,50,-500)
+
         
-        Add(crab)
+//        crabAudio:Load("crabWalk.ogg")
+//        crabAudio:EnableLooping()
+//        crabAudio:Play()
+//        crab:Add(crabAudio)
+//        
+            Add(crab)
 
 
     end
