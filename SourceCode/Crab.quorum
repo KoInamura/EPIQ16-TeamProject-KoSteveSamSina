@@ -12,7 +12,7 @@ Audio3D audio
 Wall leftWall
 Wall rightWall
 Random random
-integer speed = 8
+integer speed = 2
 integer direction = 1 // 1 means right and -1 means left
 
 action GetLeftWall() returns Wall
@@ -46,7 +46,7 @@ Drawable crab
         LoadCylinder(width, height, depth, crab)
         SetDescription("Crab")
 
-        //Set our point lights’s color, position, and intensity 
+        //Set our point lightsï¿½s color, position, and intensity 
 Color characterLightColor
         characterLightColor:SetColor(0.98, 0.98, 0.82, 1)
         characterLight:SetColor(characterLightColor)
@@ -64,8 +64,8 @@ Color characterLightColor
     action Update(number seconds)
         Move(direction*speed*seconds, 0, 0)
            
-            if GetGlobalPosition():Distance(leftWall:GetGlobalPosition()) < 1.0 or GetGlobalPosition():Distance(rightWall:GetGlobalPosition()) < 1.0
-                direction = direction*-1 // flip the direction
+            if GetPosition():Distance(leftWall:GetPosition()) < 1.0 or GetPosition():Distance(rightWall:GetPosition()) < 1.0
+                direction = direction * -1 // flip the direction
         SpawnRandomly()
             end
     end
