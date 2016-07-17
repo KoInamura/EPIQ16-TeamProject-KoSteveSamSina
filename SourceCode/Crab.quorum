@@ -1,4 +1,4 @@
-use Libraries.Game.Graphics.Model
+﻿use Libraries.Game.Graphics.Model
 use Libraries.Game.Graphics.Color
 use Libraries.Compute.Vector3
 use Libraries.Game.Graphics.PointLight
@@ -12,7 +12,7 @@ Audio3D audio
 Wall leftWall
 Wall rightWall
 Random random
-integer speed = 2
+integer speed = 8
 integer direction = 1 // 1 means right and -1 means left
 
 action GetLeftWall() returns Wall

@@ -146,7 +146,7 @@ class Main is Game, KeyboardListener
         Add(rock10)
         
         Color wallColor // todo: load this up with a meaningful color
-        wallColor:Yellow()
+        wallColor = wallColor:Yellow()
         Wall leftWall1
         leftWall1:LoadWall(50, 100, 200, wallColor) // fill in a height, width, and depth
         leftWall1:SetPosition(10, 2, 20) // fill in a x, y,and z
