@@ -70,7 +70,7 @@ Color characterLightColor
 //output("Left Wall X: "+leftWall:GetPosition():GetX())
 //output("Right Wall X: "+rightWall:GetPosition():GetX())
 
-            if math:AbsoluteValue(GetPosition():GetX()-leftWall:GetPosition():GetX()+(leftWall:GetWidth()/2.0)) < 1.0 or math:AbsoluteValue(GetPosition():GetX() - rightWall:GetPosition():GetX()-(rightWall:GetWidth()/2.0)) < 1.0
+            if math:AbsoluteValue(GetPosition():GetX()-leftWall:GetPosition():GetX()-(leftWall:GetWidth()/2.0)) < 1.0 or math:AbsoluteValue(GetPosition():GetX() - rightWall:GetPosition():GetX()+(rightWall:GetWidth()/2.0)) < 1.0
                 direction = direction * -1 // flip the direction
         SpawnRandomly()
             end
