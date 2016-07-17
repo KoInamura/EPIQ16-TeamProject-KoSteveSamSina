@@ -17,7 +17,22 @@ use Libraries.Interface.Events.KeyboardEvent
 class Main is Game, KeyboardListener
     Camera camera = undefined
     Model ground
+   
+    Model rock1
+    Model rock2
+    Model rock3
+    Model rock4
+    Model rock5
+    Model rock6
+    Model rock7
+    Model rock8
+    Model rock9
+    Model rock10
+
     Drawable grass
+    Drawable background
+    Drawable rockPicture
+        
    
     action Main
         StartGame()
@@ -25,13 +40,17 @@ class Main is Game, KeyboardListener
 
    
     action CreateGame
-        Drawable background
-        Model character
+        integer rockCounter = 0
         //PerspectiveCamera camera = undefined
 
         AmbientLight ambient
         ambient:SetColor(0.3, 0.3, 0.3, 1)
         SetAmbientLight(ambient)
+
+        DirectionalLight light
+        light:SetColor(0, 0.3, 0.4, 1)
+        light:SetDirection(0.2, -0.8, 0.8)
+        Add(light)
 
 //        camera = cast(PerspectiveCamera,GetCamera3D())
 //        camera:SetPosition(-3, 1, 0)
@@ -51,8 +70,40 @@ class Main is Game, KeyboardListener
         layer:Add(background)
 
         grass:Load("GrassField1.jpg")
-        ground:LoadBox(2000, 2, 2000, grass)
+        ground:LoadBox(1000, 2, 1000, grass)
         Add(ground)
+        
+        
+        rockPicture:Load("Rock1.png")
+        rock1:LoadBox(10, 10, 10, rockPicture)
+        rock1:SetPosition(-150, 10, -300)
+        Add(rock1)
+        
+        rockPicture:Load("Rock1.png")
+        rock2:LoadBox(10, 10, 10, rockPicture)
+        rock2:SetPosition(150, 10, -300)
+        Add(rock2)
+
+        rockPicture:Load("Rock1.png")
+        rock3:LoadBox(10, 10, 10, rockPicture)
+        rock3:SetPosition(-10, 10, -400)
+        Add(rock3)
+
+        rockPicture:Load("Rock1.png")
+        rock4:LoadBox(10, 10, 10, rockPicture)
+        rock4:SetPosition(-80, 10, -300)
+        Add(rock4)
+
+        rockPicture:Load("Rock1.png")
+        rock5:LoadBox(10, 10, 10, rockPicture)
+        rock5:SetPosition(-150, 10, -200)
+        Add(rock5)
+
+        rockPicture:Load("Rock1.png")
+        rock6:LoadBox(10, 10, 10, rockPicture)
+        rock6:SetPosition(10, 10, -400)
+        Add(rock6)
+
     end
 
     
