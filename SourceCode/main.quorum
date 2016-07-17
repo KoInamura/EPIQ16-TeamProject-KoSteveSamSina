@@ -9,8 +9,12 @@ use Libraries.Game.Graphics.DirectionalLight
 use Libraries.Game.Audio3D
 use Libraries.Game.Graphics.Drawable
 use Libraries.Game.Graphics.Camera
+use Libraries.Game.Layer2D
+use Libraries.Game.Graphics.PerspectiveCamera
+use Libraries.Interface.Events.KeyboardListener
+use Libraries.Interface.Events.KeyboardEvent
 
-class Main is Game
+class Main is Game, KeyboardListener
     Camera camera = undefined
     Model ground
     Drawable grass
@@ -21,11 +25,30 @@ class Main is Game
 
    
     action CreateGame
+        Drawable background
+        Model character
+        //PerspectiveCamera camera = undefined
+
+        AmbientLight ambient
+        ambient:SetColor(0.3, 0.3, 0.3, 1)
+        SetAmbientLight(ambient)
+
+//        camera = cast(PerspectiveCamera,GetCamera3D())
+//        camera:SetPosition(-3, 1, 0)
+//        camera:LookAt(1, 1, 0) 
+//        camera:SetUp(0,1,0)
+        
+
         camera = GetCamera3D()
         camera:SetPosition(0, 25, -500)
         camera:LookAt(0, 0, 0)
         camera:SetFar(1000)
         camera:SetNear(1)
+
+        Layer2D layer
+        AddLayer(0, layer)
+        background:Load("OceanBottom.png")
+        layer:Add(background)
 
         grass:Load("GrassField1.jpg")
         ground:LoadBox(2000, 2, 2000, grass)
