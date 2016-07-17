@@ -108,15 +108,15 @@ class Main is Game, KeyboardListener
         Add(rock6)
 
         crab:LoadSphere(40,40,40,"crab.png")
-        crab:SetPosition(35,50,-500)
+        crab:SetPosition(50,50,-600)
 
         
-//        crabAudio:Load("crabWalk.ogg")
-//        crabAudio:EnableLooping()
-//        crabAudio:Play()
-//        crab:Add(crabAudio)
-//        
-            Add(crab)
+        crabAudio:Load("crabWalk.ogg")
+        //crabAudio:EnableLooping()
+        crabAudio:Play()
+        crab:Add(crabAudio)
+        
+        Add(crab)
 
 
     end
@@ -124,7 +124,7 @@ class Main is Game, KeyboardListener
     
     action Update(number seconds)
 
-        crab:Move(0, 0, seconds * -50)
+        crab:Move(0, 0, seconds * 40)
             /* ************ */
             /* when a box hit the other wall, we have to put it back to his first position */
             if crab:GetZ() < -10 // -30 is the Z-Axis position of the left wall 
