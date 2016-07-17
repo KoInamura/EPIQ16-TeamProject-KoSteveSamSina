@@ -17,7 +17,7 @@ use Libraries.Compute.Random
 
 
 class Main is Game, KeyboardListener
-    Camera camera = undefined
+    PerspectiveCamera camera = undefined
     Model ground
    
     Model rock1
@@ -40,7 +40,7 @@ class Main is Game, KeyboardListener
     Random ran
 
     // The speed of the character when he moves
-    number speed = 10
+    number speed = 30
 
     // These are the values that we will use to move the character
     number velocityX = 0
@@ -55,7 +55,7 @@ class Main is Game, KeyboardListener
    
     action CreateGame
         
-        PerspectiveCamera camera = undefined
+        
 
         AmbientLight ambient
         ambient:SetColor(0.3, 0.3, 0.3, 1)
@@ -83,14 +83,14 @@ class Main is Game, KeyboardListener
         Add(ground)
         
         diver:Load("man.g3db") // load the g3db model
-        diver:Scale(0.035, 0.035, 0.035)
+        diver:Scale(0.008, 0.008, 0.008)
         diver:SetPosition(0, 10, -500)
         diver:Rotate(0, 1, 0, 90)
         Add(diver)
         
         pointLight:SetColor(1, 1, 1, 1)
         pointLight:SetPosition(0, 3, 0)
-        pointLight:SetIntensity(20)
+        pointLight:SetIntensity(50)
         diver:Add(pointLight)
 
         rockPicture:Load("Rock1.png")
@@ -172,7 +172,9 @@ class Main is Game, KeyboardListener
 
         // Moves the camera according to the character position
        // camera:SetPosition(diver:GetPosition():GetX()-4,diver:GetPosition():GetY()+3,diver:GetPosition():GetZ())
-        
+        camera:SetPosition(diver:GetPosition():GetX()-5,diver:GetPosition():GetY(),diver:GetPosition():GetZ())
+       camera:SetPosition(diver:GetPosition():GetX(),diver:GetPosition():GetY()+5,diver:GetPosition():GetZ()-10)
+
 
     end
     
