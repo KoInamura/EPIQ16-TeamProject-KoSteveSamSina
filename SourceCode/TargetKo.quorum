@@ -31,7 +31,7 @@ class TargetKo is Model
 
         PointLightColor:SetColor(0.98, 0.98, 0.82, 1)
         characterLight:SetColor(PointLightColor)
-        characterLight:SetIntensity(7500)
+        characterLight:SetIntensity(750)
         characterLight:SetPosition(1, 0, 0)
 
         me:Add(characterLight)
