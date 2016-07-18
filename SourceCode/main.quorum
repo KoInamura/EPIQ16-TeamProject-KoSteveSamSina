@@ -200,7 +200,7 @@ boolean endHandled = false
 
         Wall leftEdgeWall
         leftEdgeWall:LoadWall(10, 20, 800, wallColor)
-        leftEdgeWall:SetPosition(-200,2,-100)
+        leftEdgeWall:SetPosition(-400,2,-100)
         Add(leftEdgeWall)
 
         Wall rightEdgeWall
