@@ -62,7 +62,7 @@ Color characterLightColor
 
         SpawnRandomly()
 
-        audio:Load("crabWalk.ogg")
+        audio:Load("crab.wav")
         audio:EnableLooping()
         audio:Play()
         Add(audio)
