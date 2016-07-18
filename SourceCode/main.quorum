@@ -138,7 +138,7 @@ class Main is Game, KeyboardListener
         diver:Add(pointLight)
 
         Rock rock1
-        rock1:SetPosition(-200, 10, -375)
+        rock1:SetPosition(-125, 10, -375)
         Add(rock1)
         
         Rock rock2
@@ -154,11 +154,11 @@ class Main is Game, KeyboardListener
         Add(rock4)
 
         Rock rock5
-        rock5:SetPosition(-300, 10, -20)
+        rock5:SetPosition(10, 10, -200)
         Add(rock5)
 
         Rock rock6
-        rock6:SetPosition(10, 10, -10)
+        rock6:SetPosition(10, 10, -375)
         Add(rock6)
 
         Rock rock7
@@ -166,7 +166,7 @@ class Main is Game, KeyboardListener
         Add(rock7)
         
         Rock rock8
-        rock8:SetPosition(-200, 10, 50)
+        rock8:SetPosition(100, 10, 50)
         Add(rock8)
 
         Rock rock9
@@ -174,7 +174,7 @@ class Main is Game, KeyboardListener
         Add(rock9)
 
         Rock rock10
-        rock10:SetPosition(5, 10, 300)
+        rock10:SetPosition(-175, 10, 300)
         Add(rock10)
         
         Color wallColor // todo: load this up with a meaningful color
