@@ -175,11 +175,11 @@ class Main is Game, KeyboardListener
         Add(crab1)
 
         pokemonGoer1:CreateCharacter()
-        pokemonGoer1:SetPosition(-40, 10, -410)
+        pokemonGoer1:SetPosition(-80, 10, -410)
         Add(pokemonGoer1)
         
         pokemonGoer2:CreateCharacter("pokemonGoer1.png")
-        pokemonGoer2:SetPosition(-65, 10, -430)
+        pokemonGoer2:SetPosition(-95, 10, -430)
         Add(pokemonGoer2)
 
         ko:LoadKo()
