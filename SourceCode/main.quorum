@@ -160,11 +160,11 @@ class Main is Game, KeyboardListener
         Add(rightWall1)
         Add(crab1)
 
-        pokemonGoer1:CreateCharacter()
+        pokemonGoer1:LoadPokemonGoer(false)
         pokemonGoer1:SetPosition(-80, 10, -410)
         Add(pokemonGoer1)
         
-        pokemonGoer2:CreateCharacter("pokemonGoer1.png")
+        pokemonGoer2:LoadPokemonGoer(true)
         pokemonGoer2:SetPosition(-95, 10, -430)
         Add(pokemonGoer2)
 
@@ -235,6 +235,5 @@ class Main is Game, KeyboardListener
         velocityY = 0
         velocityZ = -speed 
     end
-
 
 end
