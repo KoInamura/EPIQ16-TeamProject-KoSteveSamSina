@@ -99,7 +99,7 @@ boolean endHandled = false
         Add(diver)
 
         helmet:Load("diving-helmet.jpg")					
-        head:LoadCylinder(2, 2, 2, helmet)
+        head:LoadSphere(2, 2, 2, helmet)
         head:Rotate(0, 1, 0, 90)
         head:SetPosition(0, 4, 0)
         diver:Add(head)
