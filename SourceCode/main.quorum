@@ -180,44 +180,44 @@ class Main is Game, KeyboardListener
         Color wallColor // todo: load this up with a meaningful color
         wallColor = wallColor:Yellow()
 
-        Wall firstWall
-        firstWall:LoadWall(10, 20, 230, wallColor)
-        firstWall:SetPosition(-15,2,-370)
-        Add(firstWall)
-
-        Wall secondWall
-        secondWall:LoadWall(10, 20, 130, wallColor)
-        secondWall:SetPosition(40,2,-400)
-        Add(secondWall)
-        
-        Crab crab2
-        crab2:LoadCrab(10, 10, 20, firstWall, secondWall) // fill in a width, height, and depth (no need to provide position b/c magic!)
-
-        //create far edges with crabs
-
-        Wall leftEdgeWall
-        leftEdgeWall:LoadWall(10, 20, 800, wallColor)
-        leftEdgeWall:SetPosition(-200,2,-100)
-        Add(leftEdgeWall)
-
-        Wall rightEdgeWall
-        rightEdgeWall:LoadWall(10, 20, 800, wallColor)
-        rightEdgeWall:SetPosition(200,2,-100)
-        Add(rightEdgeWall)
-        
-        Crab crab1
-        crab1:LoadCrab(10, 10, 20, leftEdgeWall, rightEdgeWall) // fill in a width, height, and depth (no need to provide position b/c magic!)
-
-        Add(leftEdgeWall)
-        Add(rightEdgeWall)
-        Add(crab1)
-
-        //Continue building walls
-
-        Wall thirdWall
-        thirdWall:LoadWall(100, 20, 10, wallColor)
-        thirdWall:SetPosition(80,2,-330)
-        Add(thirdWall) 
+//        Wall firstWall
+//        firstWall:LoadWall(10, 20, 230, wallColor)
+//        firstWall:SetPosition(-15,2,-370)
+//        Add(firstWall)
+//
+//        Wall secondWall
+//        secondWall:LoadWall(10, 20, 130, wallColor)
+//        secondWall:SetPosition(40,2,-400)
+//        Add(secondWall)
+//        
+//        Crab crab2
+//        crab2:LoadCrab(10, 10, 20, firstWall, secondWall) // fill in a width, height, and depth (no need to provide position b/c magic!)
+//
+//        //create far edges with crabs
+//
+//        Wall leftEdgeWall
+//        leftEdgeWall:LoadWall(10, 20, 800, wallColor)
+//        leftEdgeWall:SetPosition(-200,2,-100)
+//        Add(leftEdgeWall)
+//
+//        Wall rightEdgeWall
+//        rightEdgeWall:LoadWall(10, 20, 800, wallColor)
+//        rightEdgeWall:SetPosition(200,2,-100)
+//        Add(rightEdgeWall)
+//        
+//        Crab crab1
+//        crab1:LoadCrab(10, 10, 20, leftEdgeWall, rightEdgeWall) // fill in a width, height, and depth (no need to provide position b/c magic!)
+//
+//        Add(leftEdgeWall)
+//        Add(rightEdgeWall)
+//        Add(crab1)
+//
+//        //Continue building walls
+//
+//        Wall thirdWall
+//        thirdWall:LoadWall(100, 20, 10, wallColor)
+//        thirdWall:SetPosition(80,2,-330)
+//        Add(thirdWall) 
 //       
         Wall fourthWall
         fourthWall:LoadWall(10, 20, 280, wallColor)
@@ -234,8 +234,18 @@ class Main is Game, KeyboardListener
         sixthWall:SetPosition(-10,2, -60)
         Add(sixthWall)
 
+        Wall seventhWall
+        seventhWall:LoadWall(10, 20, 280, wallColor)
+        seventhWall:SetPosition(-250,2,-150)
+        Add(seventhWall)
+
+        Wall eighthWall
+        eighthWall:LoadWall(300, 20, 10, wallColor)
+        eighthWall:SetPosition(-200,2, 120)
+        Add(eighthWall)
+
         pokemonGoer1:LoadPokemonGoer(false)
-        pokemonGoer1:SetPosition(-80, 10, -410)
+        pokemonGoer1:SetPosition(-80, 10, 410)
         Add(pokemonGoer1)
         
         pokemonGoer2:LoadPokemonGoer(true)
