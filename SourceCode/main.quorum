@@ -274,7 +274,7 @@ boolean endHandled = false
        //first person //camera:SetPosition(diver:GetPosition():GetX()-5,diver:GetPosition():GetY(),diver:GetPosition():GetZ())
        camera:SetPosition(diver:GetPosition():GetX(),diver:GetPosition():GetY()+5,diver:GetPosition():GetZ()-10)
 
-if not endHandled and diver:GetGlobalPosition():Distance(ko:GetGlobalPosition()) < 2.0
+if not endHandled and diver:GetGlobalPosition():Distance(ko:GetGlobalPosition()) < 10.0
 endHandled = true
 pair:Add(diver)
 pair:Add(ko)
@@ -282,7 +282,7 @@ Remove(diver)
 Remove(ko)
 Add(pair)
 elseif endHandled
-pair:Scale(1.2, 1.2, 1.2)
+pair:Scale(1.03, 1.03, 1.03)
 pair:Rotate(0, 1, 0, 6)
 end
     end
