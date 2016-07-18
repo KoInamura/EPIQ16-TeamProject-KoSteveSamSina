@@ -57,7 +57,7 @@ Drawable crab
 Color characterLightColor
         characterLightColor:SetColor(0.98, 0.98, 0.82, 1)
         characterLight:SetColor(characterLightColor)
-        characterLight:SetIntensity(100)
+        characterLight:SetIntensity(50)
         Add(characterLight)
 
         SpawnRandomly()
