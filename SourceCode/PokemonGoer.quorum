@@ -49,7 +49,7 @@ Audio3D audio
         //add audio
         audio:Load("Jigglypuff.ogg")
         audio:EnableLooping()
-        audio:Play()
+        //audio:Play()
         Add(audio)
 
         me:Add(characterLight)
