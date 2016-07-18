@@ -130,7 +130,7 @@ class Main is Game, KeyboardListener
         Add(rock2)
 
         Rock rock3
-        rock3:SetPosition(-10, 10, -400)
+        rock3:SetPosition(-1, 10, -400)
         Add(rock3)
 
         Rock rock4
@@ -174,16 +174,27 @@ class Main is Game, KeyboardListener
         secondWall:SetPosition(40,2,-400)
         Add(secondWall)
         
-        Wall thirdWall
-        thirdWall:LoadWall(100, 20, 10, wallColor)
-        thirdWall:SetPosition(80,2,-330)
-        Add(thirdWall)        
         Crab crab1
         crab1:LoadCrab(10, 10, 20, firstWall, secondWall) // fill in a width, height, and depth (no need to provide position b/c magic!)
 
         Add(firstWall)
         Add(secondWall)
         Add(crab1)
+
+        Wall thirdWall
+        thirdWall:LoadWall(100, 20, 10, wallColor)
+        thirdWall:SetPosition(80,2,-330)
+        Add(thirdWall) 
+       
+        Wall fourthWall
+        fourthWall:LoadWall(10, 20, 280, wallColor)
+        fourthWall:SetPosition(130,2,-200)
+        Add(fourthWall)
+
+//        Wall fifthWall
+//        fifthWall:LoadWall(10, 20, 280, wallColor)
+//        fifthWall:SetPosition(-80 ,2, 0)
+//        Add(fifthWall)
 
         pokemonGoer1:LoadPokemonGoer(false)
         pokemonGoer1:SetPosition(-80, 10, -410)
