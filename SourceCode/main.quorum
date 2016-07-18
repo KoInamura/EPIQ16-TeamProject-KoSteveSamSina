@@ -180,21 +180,21 @@ class Main is Game, KeyboardListener
         Color wallColor // todo: load this up with a meaningful color
         wallColor = wallColor:Yellow()
 
-        Wall firstWall
-        firstWall:LoadWall(10, 20, 230, wallColor)
-        firstWall:SetPosition(-15,2,-370)
-        Add(firstWall)
+        Wall leftEdgeWall
+        leftEdgeWall:LoadWall(10, 20, 800, wallColor)
+        leftEdgeWall:SetPosition(-200,2,-100)
+        Add(leftEdgeWall)
 
-        Wall secondWall
-        secondWall:LoadWall(10, 20, 130, wallColor)
-        secondWall:SetPosition(40,2,-400)
-        Add(secondWall)
+        Wall rightEdgeWall
+        rightEdgeWall:LoadWall(10, 20, 800, wallColor)
+        rightEdgeWall:SetPosition(200,2,-100)
+        Add(rightEdgeWall)
         
         Crab crab1
-        crab1:LoadCrab(10, 10, 20, firstWall, secondWall) // fill in a width, height, and depth (no need to provide position b/c magic!)
+        crab1:LoadCrab(10, 10, 20, leftEdgeWall, rightEdgeWall) // fill in a width, height, and depth (no need to provide position b/c magic!)
 
-        Add(firstWall)
-        Add(secondWall)
+        Add(leftEdgeWall)
+        Add(rightEdgeWall)
         Add(crab1)
 
         Wall thirdWall
