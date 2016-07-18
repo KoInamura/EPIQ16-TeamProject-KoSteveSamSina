@@ -23,8 +23,13 @@ class Main is Game, KeyboardListener
     Model head
     Model ship1
 
-    Model diver    
+    Model diver 
+    Model blockbody
+    Model blockhead 
+    
     Drawable drawship 
+    Drawable drawbody
+    Drawable drawhead 
                 
     Drawable grass
     Drawable background
@@ -91,6 +96,18 @@ class Main is Game, KeyboardListener
         head:Rotate(0, 1, 0, 90)
         head:SetPosition(0, 4, 0)
         diver:Add(head)
+
+        drawbody:Load("body.png")
+        blockbody:LoadBox(5, 5, 5, drawbody)
+        //blockbody:Rotate(0, 1, 0, 90)
+        blockbody:SetPosition(-10, 5, -450)
+        Add(blockbody)
+
+        drawhead:Load("blockhead.png")
+        blockhead:LoadSphere(5, 5, 5, drawhead)
+        blockhead:SetPosition(0, 5, 0)
+        blockhead:Rotate(0, 1, 0, 90)
+        blockbody:Add(blockhead)
 
         drawship:Load("shipwreck.png")
         ship1:LoadBox(100, 100, 100, drawship)
