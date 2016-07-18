@@ -20,25 +20,22 @@ class Main is Game, KeyboardListener
     PerspectiveCamera camera = undefined
     Model ground
    
-    Model rock1
-    Model rock2
-    Model rock3
-    Model rock4
-    Model rock5
-    Model rock6
-    Model rock7
-    Model rock8
-    Model rock9
-    Model rock10
     Model head
     Model ship1
 
     Model diver
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     
     Drawable drawship 
+=======
+        
+>>>>>>> Stashed changes
+=======
+        
+>>>>>>> Stashed changes
     Drawable grass
     Drawable background
-    Drawable rockPicture
     Drawable helmet
 
     Random ran
@@ -114,53 +111,43 @@ class Main is Game, KeyboardListener
         pointLight:SetIntensity(20)
         diver:Add(pointLight)
 
-        rockPicture:Load("Rock1.png")
-        rock1:LoadBox(20, 20, 20, rockPicture)
+        Rock rock1
         rock1:SetPosition(-150, 10, -300)
         Add(rock1)
         
-        rockPicture:Load("Rock1.png")
-        rock2:LoadBox(20, 20, 20, rockPicture)
+        Rock rock2
         rock2:SetPosition(150, 10, -300)
         Add(rock2)
 
-        rockPicture:Load("Rock1.png")
-        rock3:LoadBox(20, 20, 20, rockPicture)
+        Rock rock3
         rock3:SetPosition(-10, 10, -400)
         Add(rock3)
 
-        rockPicture:Load("Rock1.png")
-        rock4:LoadBox(20, 20, 20, rockPicture)
+        Rock rock4
         rock4:SetPosition(-80, 10, -300)
         Add(rock4)
 
-        rockPicture:Load("Rock1.png")
-        rock5:LoadBox(20, 20, 20, rockPicture)
+        Rock rock5
         rock5:SetPosition(-150, 10, -200)
         Add(rock5)
 
-        rockPicture:Load("Rock1.png")
-        rock6:LoadBox(20, 20, 20, rockPicture)
+        Rock rock6
         rock6:SetPosition(10, 10, -450)
         Add(rock6)
 
-        rockPicture:Load("Rock1.png")
-        rock7:LoadBox(20, 20, 20, rockPicture)
+        Rock rock7
         rock7:SetPosition(40, 10, -150)
         Add(rock7)
         
-        rockPicture:Load("Rock1.png")
-        rock8:LoadBox(20, 20, 20, rockPicture)
+        Rock rock8
         rock8:SetPosition(-110, 10, -50)
         Add(rock8)
 
-        rockPicture:Load("Rock1.png")
-        rock9:LoadBox(20, 20, 20, rockPicture)
+        Rock rock9
         rock9:SetPosition(50, 10, 200)
         Add(rock9)
 
-        rockPicture:Load("Rock1.png")
-        rock10:LoadBox(20, 20, 20, rockPicture)
+        Rock rock10
         rock10:SetPosition(-100, 10, 250)
         Add(rock10)
         
