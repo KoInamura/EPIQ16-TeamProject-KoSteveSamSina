@@ -94,7 +94,7 @@ boolean endHandled = false
         
         diver:Load("man.g3db") // load the g3db model
         diver:Scale(0.008, 0.008, 0.008)
-        diver:SetPosition(0, 4, -500)
+        diver:SetPosition(8, 4, -500)
         diver:Rotate(0, 1, 0, 90)
         Add(diver)
 
