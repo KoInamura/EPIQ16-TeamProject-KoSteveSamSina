@@ -27,7 +27,7 @@ end
         Add(characterLight)
 
 if female
-        audio:Load("Jigglypuff.ogg")
+        audio:Load("Jigglypuff.wav")
         audio:EnableLooping()
         audio:Play()
         Add(audio)
