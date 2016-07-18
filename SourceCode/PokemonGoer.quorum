@@ -2,6 +2,7 @@ use Libraries.Game.Graphics.Color
 use Libraries.Game.Graphics.PointLight
 use Libraries.Game.Graphics.Model
 use Libraries.Game.Graphics.Drawable
+use Libraries.Game.Audio3D
 
 
 class PokemonGoer is Model
@@ -10,9 +11,10 @@ Model pokemonGoer1
 Color PointLightColor
 PointLight characterLight
 Drawable pokemonpic1
+Audio3D audio
 
     action CreateCharacter()
-        
+        //Boy Pokemon goer
         pokemonpic1:Load("pokemonGoer2.png")
         pokemonGoer1:LoadBox(10,20,5, pokemonpic1)
         //pokemonGoer1:SetPosition(10,2,-550)
@@ -21,9 +23,9 @@ Drawable pokemonpic1
 
         PointLightColor:SetColor(0.98, 0.98, 0.82, 1)
         characterLight:SetColor(PointLightColor)
-        characterLight:SetIntensity(7500)
-        characterLight:SetPosition(0, -3, 0)
-
+        characterLight:SetIntensity(50)
+        characterLight:SetPosition(0, 5, -5)
+        
         me:Add(characterLight)
 
         Add(pokemonGoer1)
@@ -32,7 +34,7 @@ Drawable pokemonpic1
     end
 
     action CreateCharacter(Text text1)
-        
+        //girl pokemon goer
         pokemonpic1:Load(text1)
         pokemonGoer1:LoadBox(10,20,5,pokemonpic1)
         //pokemonGoer1:SetPosition(10,2,-550)
@@ -41,8 +43,14 @@ Drawable pokemonpic1
 
         PointLightColor:SetColor(0.98, 0.98, 0.82, 1)
         characterLight:SetColor(PointLightColor)
-        characterLight:SetIntensity(75)
-        characterLight:SetPosition(0, -3, 0)
+        characterLight:SetIntensity(50)
+        characterLight:SetPosition(0, 5, -5)
+
+        //add audio
+        audio:Load("Jigglypuff.ogg")
+        audio:EnableLooping()
+        audio:Play()
+        Add(audio)
 
         me:Add(characterLight)
 
