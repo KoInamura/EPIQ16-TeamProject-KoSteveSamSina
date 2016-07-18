@@ -180,21 +180,21 @@ class Main is Game, KeyboardListener
         Color wallColor // todo: load this up with a meaningful color
         wallColor = wallColor:Yellow()
 
-//        Wall firstWall
-//        firstWall:LoadWall(10, 20, 230, wallColor)
-//        firstWall:SetPosition(-15,2,-370)
-//        Add(firstWall)
-//
-//        Wall secondWall
-//        secondWall:LoadWall(10, 20, 130, wallColor)
-//        secondWall:SetPosition(40,2,-400)
-//        Add(secondWall)
-//        
-//        Crab crab2
-//        crab2:LoadCrab(10, 10, 20, firstWall, secondWall) // fill in a width, height, and depth (no need to provide position b/c magic!)
-//
-//        //create far edges with crabs
-//
+        Wall firstWall
+        firstWall:LoadWall(10, 20, 230, wallColor)
+        firstWall:SetPosition(-15,2,-370)
+        Add(firstWall)
+
+        Wall secondWall
+        secondWall:LoadWall(10, 20, 130, wallColor)
+        secondWall:SetPosition(40,2,-400)
+        Add(secondWall)
+        
+        Crab crab2
+        crab2:LoadCrab(10, 10, 20, firstWall, secondWall) // fill in a width, height, and depth (no need to provide position b/c magic!)
+
+        //create far edges with crabs
+
 //        Wall leftEdgeWall
 //        leftEdgeWall:LoadWall(10, 20, 800, wallColor)
 //        leftEdgeWall:SetPosition(-200,2,-100)
@@ -208,48 +208,50 @@ class Main is Game, KeyboardListener
 //        Crab crab1
 //        crab1:LoadCrab(10, 10, 20, leftEdgeWall, rightEdgeWall) // fill in a width, height, and depth (no need to provide position b/c magic!)
 //
+//        
 //        Add(leftEdgeWall)
 //        Add(rightEdgeWall)
 //        Add(crab1)
-//
-//        //Continue building walls
-//
-//        Wall thirdWall
-//        thirdWall:LoadWall(100, 20, 10, wallColor)
-//        thirdWall:SetPosition(80,2,-330)
-//        Add(thirdWall) 
-//       
+
+        //Continue building walls
+
+        Wall thirdWall
+        thirdWall:LoadWall(100, 20, 10, wallColor)
+        thirdWall:SetPosition(80,2,-330)
+        Add(thirdWall) 
+       
         Wall fourthWall
         fourthWall:LoadWall(10, 20, 280, wallColor)
         fourthWall:SetPosition(130,2,-200)
         Add(fourthWall)
 
-        Wall fifthWall
-        fifthWall:LoadWall(280, 20, 10, wallColor)
-        fifthWall:SetPosition(-150,2, -245)
-        Add(fifthWall)
+//        Wall fifthWall
+//        fifthWall:LoadWall(280, 20, 10, wallColor)
+//        fifthWall:SetPosition(-150,2, -245)
+//        Add(fifthWall)
 
-        Wall sixthWall
-        sixthWall:LoadWall(280, 20, 10, wallColor)
-        sixthWall:SetPosition(-10,2, -60)
-        Add(sixthWall)
-
-        Wall seventhWall
-        seventhWall:LoadWall(10, 20, 280, wallColor)
-        seventhWall:SetPosition(-250,2,-150)
-        Add(seventhWall)
-
-        Wall eighthWall
-        eighthWall:LoadWall(300, 20, 10, wallColor)
-        eighthWall:SetPosition(-200,2, 120)
-        Add(eighthWall)
+//        Wall sixthWall
+//        sixthWall:LoadWall(280, 20, 10, wallColor)
+//        sixthWall:SetPosition(-10,2, -60)
+//        Add(sixthWall)
+//
+//        Wall seventhWall
+//        seventhWall:LoadWall(10, 20, 280, wallColor)
+//        seventhWall:SetPosition(-250,2,-150)
+//        Add(seventhWall)
+//
+//        Wall eighthWall
+//        eighthWall:LoadWall(300, 20, 10, wallColor)
+//        eighthWall:SetPosition(-200,2, 120)
+//        Add(eighthWall)
 
         pokemonGoer1:LoadPokemonGoer(false)
-        pokemonGoer1:SetPosition(-80, 10, 410)
+        pokemonGoer1:SetPosition(150, 10, 410)
         Add(pokemonGoer1)
         
+        //This is the female
         pokemonGoer2:LoadPokemonGoer(true)
-        pokemonGoer2:SetPosition(-95, 10, -430)
+        pokemonGoer2:SetPosition(50, 10, -280)
         Add(pokemonGoer2)
 
         ko:LoadKo()
