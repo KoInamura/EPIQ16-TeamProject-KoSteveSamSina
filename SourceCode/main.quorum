@@ -237,10 +237,10 @@ boolean endHandled = false
         sixthWall:SetPosition(-10,2, -60)
         Add(sixthWall)
 
-        Wall seventhWall
-        seventhWall:LoadWall(10, 20, 280, wallColor)
-        seventhWall:SetPosition(-300,2,-150)
-        Add(seventhWall)
+//        Wall seventhWall
+//        seventhWall:LoadWall(10, 20, 280, wallColor)
+//        seventhWall:SetPosition(-300,2,-150)
+//        Add(seventhWall)
 
         Wall eighthWall
         eighthWall:LoadWall(300, 20, 10, wallColor)
@@ -248,7 +248,7 @@ boolean endHandled = false
         Add(eighthWall)
 
         pokemonGoer1:LoadPokemonGoer(false)
-        pokemonGoer1:SetPosition(150, 10, 410)
+        pokemonGoer1:SetPosition(40, 10, 310)
         Add(pokemonGoer1)
         
         //This is the female
