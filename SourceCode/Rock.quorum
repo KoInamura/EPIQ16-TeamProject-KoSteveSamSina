@@ -15,10 +15,10 @@ end
         LoadBox(20, 20, 20, rock)
         SetDescription("Rock")
 
-        audio:Load("rock.wav")
-        audio:EnableLooping()
-        audio:Play()
-        Add(audio)
+//        audio:Load("rock.wav")
+//        audio:EnableLooping()
+//        audio:Play()
+//        Add(audio)
     end
 
 action GetLeftEdge() returns number
