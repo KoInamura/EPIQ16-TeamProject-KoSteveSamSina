@@ -91,7 +91,7 @@ class Main is Game, KeyboardListener
         
         diver:Load("man.g3db") // load the g3db model
         diver:Scale(0.008, 0.008, 0.008)
-        diver:SetPosition(0, 10, -500)
+        diver:SetPosition(0, 4, -500)
         diver:Rotate(0, 1, 0, 90)
         Add(diver)
 
@@ -138,43 +138,43 @@ class Main is Game, KeyboardListener
         diver:Add(pointLight)
 
         Rock rock1
-        rock1:SetPosition(-150, 10, -300)
+        rock1:SetPosition(-200, 10, -375)
         Add(rock1)
         
         Rock rock2
-        rock2:SetPosition(150, 10, -300)
+        rock2:SetPosition(150, 10, -75)
         Add(rock2)
 
         Rock rock3
-        rock3:SetPosition(-1, 10, -400)
+        rock3:SetPosition(-1, 10, -5)
         Add(rock3)
 
         Rock rock4
-        rock4:SetPosition(-80, 10, -300)
+        rock4:SetPosition(-80, 10, 275)
         Add(rock4)
 
         Rock rock5
-        rock5:SetPosition(-150, 10, -200)
+        rock5:SetPosition(-300, 10, -20)
         Add(rock5)
 
         Rock rock6
-        rock6:SetPosition(10, 10, -450)
+        rock6:SetPosition(10, 10, -10)
         Add(rock6)
 
         Rock rock7
-        rock7:SetPosition(40, 10, -150)
+        rock7:SetPosition(40, 10, 200)
         Add(rock7)
         
         Rock rock8
-        rock8:SetPosition(-110, 10, -50)
+        rock8:SetPosition(-200, 10, 50)
         Add(rock8)
 
         Rock rock9
-        rock9:SetPosition(50, 10, 200)
+        rock9:SetPosition(50, 10, 100)
         Add(rock9)
 
         Rock rock10
-        rock10:SetPosition(-100, 10, 250)
+        rock10:SetPosition(5, 10, 300)
         Add(rock10)
         
         Color wallColor // todo: load this up with a meaningful color
