@@ -94,7 +94,8 @@ class Main is Game, KeyboardListener
 
         drawship:Load("shipwreck.png")
         ship1:LoadBox(100, 100, 100, drawship)
-        ship1:SetPosition(-100, 2, 15)
+        ship1:Rotate(0, 1, 0, 45)
+        ship1:SetPosition(-100, 48, 15)
         Add(ship1) 
 
         
