@@ -39,7 +39,7 @@ rightWall = wall
 end
 
 action SpawnRandomly()
-        SetPosition(random:RandomIntegerBetween(cast(integer, leftWall:GetRightEdge()), cast(integer, rightWall:GetLeftEdge())), 20, random:RandomIntegerBetween(cast(integer, leftWall:GetFrontEdge()), cast(integer, rightWall:GetBackEdge())))
+        SetPosition(random:RandomIntegerBetween(cast(integer, leftWall:GetRightEdge()), cast(integer, rightWall:GetLeftEdge())), 10, random:RandomIntegerBetween(cast(integer, leftWall:GetFrontEdge()), cast(integer, rightWall:GetBackEdge())))
 end
 
     action LoadCrab(number width, number height, number depth, Wall leftWall, Wall rightWall)
