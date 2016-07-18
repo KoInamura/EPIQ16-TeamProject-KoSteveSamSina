@@ -26,7 +26,7 @@ class TargetKo is Model
         koAppearance:Load("ko.JPG")
 
         me:LoadBox(5, 7, 5, koAppearance)
-        SetPosition(10, 10, -400)
+        SetPosition(10, 10, 400)
         me:Rotate(0, 1, 0, 90)
 
         PointLightColor:SetColor(0.98, 0.98, 0.82, 1)
