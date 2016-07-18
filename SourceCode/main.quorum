@@ -23,17 +23,9 @@ class Main is Game, KeyboardListener
     Model head
     Model ship1
 
-    Model diver
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    
+    Model diver    
     Drawable drawship 
-=======
-        
->>>>>>> Stashed changes
-=======
-        
->>>>>>> Stashed changes
+                
     Drawable grass
     Drawable background
     Drawable helmet
