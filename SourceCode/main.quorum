@@ -282,7 +282,7 @@ Remove(diver)
 Remove(ko)
 Add(pair)
 elseif endHandled
-pair:Scale(1.03, 1.03, 1.03)
+pair:Scale(1.01, 1.01, 1.01)
 pair:Rotate(0, 1, 0, 6)
 end
     end
